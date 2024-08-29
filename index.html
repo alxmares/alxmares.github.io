@@ -1,7 +1,304 @@
 <!DOCTYPE html>
-<html>
-    <body>
-        <h1>Hello World</h1>
-        <p>Soy Alex Mares</p>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis Projects</title>
+    <link href="https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu4mxK.woff2" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            position: fixed;
+            height: 100vh;
+            overflow: auto;
+        }
+
+        .sidebar h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar p, .project-card p {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 100; /* Roboto Thin */
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .main-content {
+            margin-left: 270px;
+            padding: 20px;
+            flex: 1;
+        }
+
+        h1, .project-card h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 0;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: inherit;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .project-card-content {
+            padding: 20px;
+        }
+
+        .project-date {
+            font-size: 11px;
+            color: #666;
+        }
+
+        .tools-used img {
+            margin: 2px 4px 2px 0;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Francisco Alex Mares Solano</h2>
+        <p>I am a data analyst and data scientist with a strong background in extracting insights from complex datasets. My expertise spans across data analysis, big data, and artificial intelligence, enabling me to build and deploy data-driven solutions that drive business growth.</p>
+        
+        
+        <h3>Tools & Technologies</h3>
+    
+        <h4>Databases</h4>
+        <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
+        <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+        <img src="https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white" alt="SQL Server">
+        
+        <h4>Big Data</h4>
+        <img src="https://img.shields.io/badge/Hadoop-66CCFF?style=for-the-badge&logo=apache-hadoop&logoColor=white" alt="Hadoop">
+        <img src="https://img.shields.io/badge/Spark-FF5733?style=for-the-badge&logo=apache-spark&logoColor=white" alt="Apache Spark">
+        
+        <h4>Data Science</h4>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+        <img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white" alt="R">
+        <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
+        <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
+        <img src="https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit Learn">
+
+        <h4>Programming Languages</h4>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+        <img src="https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQL">
+        <img src="https://img.shields.io/badge/Matlab-0076A8?style=for-the-badge&logo=mathworks&logoColor=white" alt="Matlab">
+        
+        <div class="expertise-venn">
+            <img src="assets/venn.png" alt="Venn Diagram of Expertise">
+        </div>
+        <style>
+            .expertise-venn {
+                text-align: center;
+                margin: 40px 0;
+            }
+        
+            .expertise-venn img {
+                max-width: 100%;
+                height: auto;
+            }
+        </style>
+    </div>
+
+    <div class="main-content">
+        <h1>Data Analysis</h1>
+        <div class="project-container">
+            <a href="https://alxmares.github.io/Historical_Automobile_Sales_Analysis/" class="project-card">
+                <img src="assets/HAS_analysis.png" alt="Project 1 Image" style="width: 300px; height: 150px; object-fit: cover;">
+                <div class="project-card-content">
+                    <h2>Historical Automobile Sales Analysis</h2>
+                    <p><strong>Tools Used:</strong></p>
+                    <div class="tools-used">
+                        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" style="width: 60px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Power_BI-%23F2C811.svg?style=for-the-badge&logo=power-bi&logoColor=black" alt="Power BI" style="width: 70px; height: 18px;">
+                        <img src="https://img.shields.io/badge/NumPy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" alt="Numpy" style="width: 60px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black" alt="Matplotlib" style="width: 100px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas" style="width: 60px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Seaborn-%23001a72.svg?style=for-the-badge&logo=seaborn&logoColor=white" alt="Seaborn" style="width: 60px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Folium-%23e34f26.svg?style=for-the-badge&logo=folium&logoColor=white" alt="Folium" style="width: 60px; height: 18px;">
+                    </div>
+                    <p> A comprehensive analysis of historical automobile sales data to uncover trends, patterns, and insights that can help in forecasting future sales and making informed business decisions.</p>
+                    <p class="project-date"> January 2024</p>
+                </div>
+            </a>
+            <a href="https://alxmares.github.io/Automated_Financial_Assistant/" class="project-card">
+                <img src="assets/OCR2.jpg" alt="Project 2 Image">
+                <div class="project-card-content">
+                    <h2>Automated Financial Assistant with Optical Recognition</h2>
+                    <p><strong>Tools Used:</strong></p>
+                    <div class="tools-used">
+                        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" style="width: 60px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Power_BI-%23F2C811.svg?style=for-the-badge&logo=power-bi&logoColor=black" alt="Power BI" style="width: 70px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoft-excel&logoColor=white" alt="Excel" style="width: 40px; height: 18px;">
+                        <img src="https://img.shields.io/badge/OCR-%23000000.svg?style=for-the-badge&logo=OCR&logoColor=white" alt="OCR" style="width: 50px; height: 18px;">
+                        <img src="https://img.shields.io/badge/DAX-%23007ACC.svg?style=for-the-badge&logo=powerbi&logoColor=white" alt="DAX" style="width: 50px; height: 18px;">
+                        <img src="https://img.shields.io/badge/NumPy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" alt="Numpy" style="width: 60px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas" style="width: 60px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Seaborn-%23001a72.svg?style=for-the-badge&logo=seaborn&logoColor=white" alt="Seaborn" style="width: 60px; height: 18px;">
+                    </div>
+                    <p>OCR (Optical Character Recognition) to convert purchase receipts into Excel tables. Power BI is then used to generate detailed weekly and monthly expense reports.</p>
+                    <p class="project-date">July 2024</p>
+                </div>
+            </a>
+            <a href="https://alxmares.github.io/SpaceX-Launch-Analysis-and-Landing-Prediction/" class="project-card">
+                <img src="assets/spacex.jpg" alt="Project 3 Image">
+                <div class="project-card-content">
+                    <h2>SpaceX Launch Analysis and Landing Prediction</h2>
+                    <p><strong>Tools Used:</strong></p>
+                    <div class="tools-used">
+                        <img src="https://img.shields.io/badge/Python-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python" style="width: 70px; height: 18px;">
+                        <img src="https://img.shields.io/badge/SQL-%234169E1.svg?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQL" style="width: 70px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Scikit--Learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn" style="width: 90px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" style="width: 70px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black" alt="Matplotlib" style="width: 90px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Seaborn-%23001a72.svg?style=for-the-badge&logo=seaborn&logoColor=white" alt="Seaborn" style="width: 70px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Folium-%23228B22.svg?style=for-the-badge&logo=folium&logoColor=white" alt="Folium" style="width: 70px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Dash-%23004F7C.svg?style=for-the-badge&logo=plotly&logoColor=white" alt="Dash" style="width: 70px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white" alt="Plotly" style="width: 70px; height: 18px;">
+                    </div>
+                    <p>Analyzing the historical launch data of SpaceX rockets to understand the factors contributing to successful landings.</p>
+                    <p class="project-date">June 2024</p>
+                </div>
+            </a>
+            <a href="https://alxmares.github.io/australia_wildfire/" class="project-card">
+                <img src="wildfire/assets/logo.jpg" alt="Project 3 Image">
+                <div class="project-card-content">
+                    <h2>Dashboard and Geospatial analysis of wildfire in Australia</h2>
+                    <p><strong>Tools Used:</strong></p>
+                    <div class="tools-used">
+                        <img src="https://img.shields.io/badge/Python-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python" style="width: 70px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" style="width: 70px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black" alt="Matplotlib" style="width: 90px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Seaborn-%23001a72.svg?style=for-the-badge&logo=seaborn&logoColor=white" alt="Seaborn" style="width: 70px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Folium-%23228B22.svg?style=for-the-badge&logo=folium&logoColor=white" alt="Folium" style="width: 70px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Dash-%23004F7C.svg?style=for-the-badge&logo=plotly&logoColor=white" alt="Dash" style="width: 70px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white" alt="Plotly" style="width: 70px; height: 18px;">
+                    </div>
+                    <p>Geospatial data analysis and dashboard to understand the behavior of wildfires in Australia.</p>
+                    <p class="project-date">May 2024</p>
+                </div>
+            </a>
+        </div>
+
+        <h1>Machine Learning / Deep Learning Projects</h1>
+        <div class="project-container">
+            <a href="https://alxmares.github.io/wav2vec2-spanish-EmotionRecognition/" class="project-card">
+                <img src="w2v2-ser/assets/logo.png" alt="Project 1 Image">
+                <div class="project-card-content">
+                    <h2>Spanish Speech Emotion Recognition</h2>
+                    <p><strong>Tools Used:</strong></p>
+                    <div class="tools-used">
+                        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" style="width: 70px; height: 18px;">
+                        <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow" style="width: 90px; height: 18px;">
+                        <img src="https://img.shields.io/badge/TensorBoard-FF6F00?style=for-the-badge&logo=tensorboard&logoColor=white" alt="TensorBoard" style="width: 80px; height: 18px;">
+                        <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" style="width: 70px; height: 18px;">
+                        <img src="https://img.shields.io/badge/NLP-black?style=for-the-badge" alt="NLP" style="width: 50px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Transformers-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" alt="Transformers" style="width: 80px; height: 18px;">
+                    </div>
+                    <p>Speech Emotion Recognition (SER) with 89% accuracy and fine-tuning of the Facebook wav2vec2 model.</p>
+                    <p class="project-date">April 2024</p>
+                </div>
+            </a>
+            <a href="https://alxmares.github.io/TTS-Spanish/" class="project-card">
+                <img src="TTS/logo.jpg" alt="Project 1 Image">
+                <div class="project-card-content">
+                    <h2>Spanish Natural Voice TTS</h2>
+                    <p><strong>Tools Used:</strong></p>
+                    <div class="tools-used">
+                        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" style="width: 70px; height: 18px;">
+                        <img src="https://img.shields.io/badge/XTTS-black?style=for-the-badge" alt="XTTS" style="width: 50px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Common%20Voice-ff7139?style=for-the-badge&logo=mozilla&logoColor=white" alt="Common Voice" style="width: 100px; height: 18px;">
+                    </div>
+                    <p>Realistic and natural Text to Speech model using the XTTS model and the Mozilla 2024 Common Voice database.</p>
+                    <p class="project-date">August 2024</p>
+                </div>
+            </a>
+            <a href="https://alxmares.github.io/Fruits-360-with-Dim-Reduction-only-188-dims/" class="project-card">
+                <img src="assets/fruit_classiffier.png" alt="Project 1 Image" style="width: 300px; height: 150px; object-fit: cover;">
+                <div class="project-card-content">
+                    <h2>Fruit Classiffier with Dimensionality Reduction</h2>
+                    <p><strong>Tools Used:</strong></p>
+                    <div class="tools-used">
+                        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" style="width: 60px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Scikit_Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" alt="Scikit Learn" style="width: 100px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas" style="width: 60px; height: 18px;">
+                    </div>
+                    <p> Over 90% accuracy with only 188 features (instead of 30,000) using PCA, TSNE, Support Vector Machine, Decision Trees, Multi-layer Perceptron, and Hard & Soft voting methods. </p>
+                    <p class="project-date"> January 2024</p>
+                </div>
+            </a>
+            <a href="https://alxmares.github.io/Rainfall_prediction_AUS/" class="project-card">
+                <img src="Weather-Data/assets/logo.jpeg" alt="Project 2 Image">
+                <div class="project-card-content">
+                    <h2>Weather analysis and Rainfall Prediction with Machine Learning</h2>
+                    <p><strong>Tools Used:</strong></p>
+                    <div class="tools-used">
+                        <img src="https://img.shields.io/badge/Python-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python" style="width: 70px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Scikit--Learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn" style="width: 90px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" style="width: 70px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black" alt="Matplotlib" style="width: 90px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Seaborn-%23001a72.svg?style=for-the-badge&logo=seaborn&logoColor=white" alt="Seaborn" style="width: 70px; height: 18px;">
+                    </div>
+                    <p> Weather analysis and rainfall prediction from the Australian Government's Bureau of Meteorology.</p>
+                    <p class="project-date">April 2024</p>
+                </div>
+            </a>
+            <a href="https://alxmares.github.io/X-ray_Pneumonia_Classification/" class="project-card">
+                <img src="assets/xray.jpg" alt="X-ray Image" style="width: 300px; height: 150px; object-fit: cover;">
+                <div class="project-card-content">
+                    <h2>X-ray Pneumonia Classification using TPUs</h2>
+                    <p><strong>Tools Used:</strong></p>
+                    <div class="tools-used">
+                        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" style="width: 60px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Scikit_Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" alt="Scikit Learn" style="width: 100px; height: 18px;">
+                        <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas" style="width: 60px; height: 18px;">
+                    </div>
+                    <p> This project analyzes sales data from the last fiscal year to identify trends and insights, helping optimize sales strategies and forecast future performance.</p>
+                    <p class="project-date">January 2024</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
 </html>
