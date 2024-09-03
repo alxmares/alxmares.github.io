@@ -13,34 +13,69 @@
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: row; /* Cambia a columna en pantallas pequeñas */
+            flex-wrap: wrap;
         }
 
         .sidebar {
             width: 290px;
-            background-color: #333;
-            color: #fff;
+            background-color: #eaeaea;
+            color: #333;
             padding: 20px;
             position: fixed;
-            height: 100vh;
-            overflow: auto;
+            top: 0;
+            bottom: 0; /* Extiende la sidebar hasta el fondo de la ventana */
+            overflow-y: auto; /* Permite el scroll vertical en la sidebar */
+            border-right: 1px solid #ccc;
+            box-sizing: border-box; /* Asegura que el padding no afecte el ancho de la barra lateral */
+            text-align: center; /* Centra todo el contenido dentro de la sidebar */
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra los elementos en el eje horizontal */
+            margin-bottom: 20px; /* Espacio inferior para separar de otros contenidos */
+        }
+
+        .profile-pic {
+            width: 120px; /* Tamaño más grande para mejorar la visibilidad */
+            height: 120px; /* Asegura que la imagen sea cuadrada */
+            border-radius: 50%;
+            object-fit: cover; /* Ajusta la imagen para que no se deforme */
+            margin-bottom: 10px; /* Espacio entre la imagen y el nombre */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor de la imagen */
         }
 
         .sidebar h2 {
             font-size: 22px;
-            margin-bottom: 10px;
+            margin-bottom: 5px; /* Ajuste para mayor cercanía con la imagen */
         }
 
-        .sidebar p, .project-card p {
+        .sidebar p {
             font-family: 'Roboto', sans-serif;
-            font-weight: 100; /* Roboto Thin */
+            font-weight: 300; /* Roboto Light para una apariencia más limpia */
             font-size: 14px;
             line-height: 1.6;
+            margin: 0 15px; /* Margen horizontal para un poco de respiro alrededor del texto */
         }
 
         .main-content {
             margin-left: 310px;
             padding: 30px;
             flex: 1;
+        }
+
+        .main-content h1 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300; /* Roboto Light */
+            text-align: left; /* Alinear a la izquierda para un diseño más profesional */
+            margin: 40px 0 20px; /* Mayor margen para separación */
+            padding-bottom: 5px; /* Espacio debajo del título */
+            border-bottom: 1px solid #ccc; /* Línea divisoria para separar secciones */
+            color: #333;
+            font-size: 24px; /* Tamaño de fuente más pequeño */
+            letter-spacing: 1px; /* Añadir espacio entre letras para mayor elegancia */
         }
 
         h1, .project-card h2 {
@@ -55,7 +90,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            gap: 20px;
+            gap: 30px;
         }
 
         .project-card {
@@ -94,19 +129,70 @@
             margin: 2px 4px 2px 0;
             vertical-align: middle;
         }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 1px solid #ccc;
+                margin-bottom: 20px;
+                text-align: center; /* Asegura que el contenido se centre en la vista móvil */
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            .project-container {
+                justify-content: center;
+            }
+
+            .project-card {
+                width: 100%;
+                max-width: 400px; /* Ajusta el ancho máximo en pantallas más pequeñas */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-card {
+                max-width: 100%; /* Ajusta el ancho máximo para móviles pequeños */
+            }
+
+            .main-content h1 {
+                font-size: 20px; /* Reduce el tamaño de la fuente para móviles */
+                text-align: center; /* Centra el texto del título en dispositivos móviles */
+            }
+        }
     </style>
 </head>
 <body>
     <div class="sidebar">
         <h2>Francisco Alex Mares Solano</h2>
-        <p>I am a data analyst and data scientist with extensive knowledge in EDA, machine learning, deep learning, big data, and dashboard creation.</p>
+        <img src="assets/Fotografía.jpg" alt="Francisco Alex Mares Solano" class="profile-pic" style="width: 150px; height: 150px;">
+        <p>22-years-old data analyst and data scientist with extensive knowledge in statistics, exploratory data analysis, machine learning, deep learning, big data, and dashboard creation.</p>
         
+        <hr class="divider">
+
         <h3>Tools & Technologies</h3>
         
+        <h4>Programming Languages</h4>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" style="width: 80px; height: 25px;">
+        <img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white" alt="R" style="width: 60px; height: 25px;">
+        <img src="https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQL" style="width: 60px; height: 25px;">
+        <img src="https://img.shields.io/badge/Matlab-0076A8?style=for-the-badge&logo=mathworks&logoColor=white" alt="Matlab" style="width: 70px; height: 25px;">
+        <img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=white" alt="C" style="width: 60px; height: 25px;">
+        <img src="https://img.shields.io/badge/VBA-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white" alt="VBA" style="width: 60px; height: 25px;">
+
         <h4>Databases</h4>
-        <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" style="width: 100px; height: 25px;">
         <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" style="width: 100px; height: 25px;">
-        <img src="https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white" alt="SQL Server" style="width: 100px; height: 25px;">
         <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" style="width: 100px; height: 25px;">
 
         <h4>Big Data</h4>
@@ -136,14 +222,6 @@
         <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white" alt="Excel" style="width: 70px; height: 25px;">
         <img src="https://img.shields.io/badge/Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white" alt="Word" style="width: 70px; height: 25px;">
         <img src="https://img.shields.io/badge/PowerPoint-B7472A?style=for-the-badge&logo=microsoft-powerpoint&logoColor=white" alt="PowerPoint" style="width: 70px; height: 25px;">
-
-        <h4>Programming Languages</h4>
-        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" style="width: 80px; height: 25px;">
-        <img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white" alt="R" style="width: 60px; height: 25px;">
-        <img src="https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQL" style="width: 60px; height: 25px;">
-        <img src="https://img.shields.io/badge/Matlab-0076A8?style=for-the-badge&logo=mathworks&logoColor=white" alt="Matlab" style="width: 70px; height: 25px;">
-        <img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=white" alt="C" style="width: 60px; height: 25px;">
-        <img src="https://img.shields.io/badge/VBA-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white" alt="VBA" style="width: 60px; height: 25px;">
 
     </div>
 
@@ -290,7 +368,7 @@
             </a>
         </div>
 
-        <h1>Deep learning projects</h1>
+        <h1>Deep Learning projects</h1>
         <div class="project-container">
             <a href="https://alxmares.github.io/wav2vec2-spanish-EmotionRecognition/" class="project-card">
                 <img src="w2v2-ser/assets/logo.png" alt="Project 1 Image">
